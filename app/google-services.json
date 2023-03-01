@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "640807153686",
+    "project_id": "yogeshwar-98ec2",
+    "storage_bucket": "yogeshwar-98ec2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:640807153686:android:ce27250f96cdb13125c537",
+        "android_client_info": {
+          "package_name": "com.example.shatayu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "640807153686-4mt9f6mc71q18ven49qfhufebt46ppcv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-_auFVeodXAroX94Ru8QtPfvaqOcG13o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "640807153686-4mt9f6mc71q18ven49qfhufebt46ppcv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
