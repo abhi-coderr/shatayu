@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
-import android.view.WindowManager
 import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
 import com.example.shatayu.R
@@ -27,7 +26,7 @@ class SplashActivity : AppCompatActivity() {
     private fun navigationDelay() {
         Handler().postDelayed({
             // Intent is used to switch from one activity to another.
-            val i = Intent(this, MainActivity::class.java)
+            val i = Intent(this, UploadVideoActivity::class.java)
             startActivity(i) // invoke the SecondActivity.
             finish() // the current activity will get finished.
         }, 3000)

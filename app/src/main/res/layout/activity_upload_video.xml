@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_300sdp"
+            android:background="@drawable/gradient_theme_all_screen"
+            tools:context=".ui.activity.UploadVideoActivity">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/tool_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/nuga_color"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.utils.widget.ImageFilterView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/streaming_logo" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:fontFamily="@font/latest"
+                        android:text="Streaming"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_15sdp" />
+
+                </androidx.appcompat.widget.Toolbar>
+
+                <TextView
+                    android:id="@+id/title_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/latest"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/disease_category"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tool_bar" />
+
+                <RelativeLayout
+                    android:id="@+id/spinner_relative"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_12ssp"
+                    android:background="@drawable/spinner_back"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_2ssp"
+                    app:layout_constraintTop_toBottomOf="@id/title_1">
+
+                    <Spinner
+                        android:id="@+id/spinner_disease_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="5dp"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:spinnerMode="dropdown" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_down" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/title_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/latest"
+                    android:padding="@dimen/_10sdp"
+                    android:text="Testimony"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/spinner_relative" />
+
+                <EditText
+                    android:id="@+id/testimony_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:background="@drawable/spinner_back"
+                    android:hint="@string/enter_testimony_name"
+                    android:padding="@dimen/_5sdp"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_13sdp"
+                    app:layout_constraintTop_toBottomOf="@id/title_2"
+                    />
+
+                <com.google.android.exoplayer2.ui.PlayerView
+                    android:id="@+id/video_player"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_300sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    app:use_controller="true"
+                    android:keepScreenOn="true"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    app:layout_constraintTop_toBottomOf="@id/testimony_name" />
+
+                <TextView
+                    android:id="@+id/get_video_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_12sdp"
+                    android:background="@drawable/capsule_back_for_textview"
+                    android:padding="@dimen/_8sdp"
+                    android:text="@string/pick_testimony"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintEnd_toEndOf="@id/video_player"
+                    app:layout_constraintStart_toStartOf="@id/video_player"
+                    app:layout_constraintTop_toBottomOf="@id/video_player" />
+
+                <TextView
+                    android:id="@+id/upload_video_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:background="@drawable/capsule_back_for_textview_green"
+                    android:padding="@dimen/_8sdp"
+                    android:text="@string/stream_testimony"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintEnd_toEndOf="@id/video_player"
+                    app:layout_constraintStart_toStartOf="@id/video_player"
+                    app:layout_constraintTop_toBottomOf="@id/get_video_btn" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

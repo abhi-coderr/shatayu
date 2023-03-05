@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Shatayu</string>
+    <string name="disease_category">Disease Category</string>
+    <string name="enter_testimony_name">Testimony Name</string>
+    <string name="pick_testimony">Pick Testimony</string>
+    <string name="stream_testimony">Stream Testimony</string>
 </resources>
